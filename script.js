@@ -21,12 +21,12 @@ class RatingWidget extends HTMLElement {
         style.innerHTML = `.stars {
             cursor: pointer;
             font-size: 24px;
-            color: black; /* Default color */
+            color: black;
           }
           .color{
               cursor: pointer;
               font-size: 24px;
-              color: orange; /* Default color */
+              color: orange; 
           }`;
           shadow.appendChild(style);
     }
