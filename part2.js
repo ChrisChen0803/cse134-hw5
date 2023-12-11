@@ -34,13 +34,16 @@ class CurrentWeather extends HTMLElement{
             background-color:white;
             color:black;
         }`;
+        
         shadow.appendChild(style);
     }
     async getWeather(){
         try{
+            //fetch from api, this link is found by https://api.weather.gov/points/32.8328,-117.2713 (these are longitude and latitude of lajolla)
             const res = await fetch(
 				'https://api.weather.gov/gridpoints/SGX/53,20/forecast',{method: 'GET',}
 			);
+            //Find the data we need to use from the things we fetch
 			var data = await res.json();
             data = data.properties.periods[0];
             console.log(data);
